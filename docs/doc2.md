@@ -7,4 +7,4 @@ You can link between docs:
 
 ## Tips
 
-> Keep docs in `/docs/` and update `.docs.json` (or auto-generate it with GitHub Actions).
+> Keep docs in `/docs/` and update `_docs.json` (or auto-generate it with GitHub Actions).

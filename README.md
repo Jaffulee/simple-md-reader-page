@@ -24,7 +24,7 @@ It is designed for lightweight static hosting (e.g. GitHub Pages) while still su
 
 <ul>
   <li>Dynamic document loading via <code>fetch()</code></li>
-  <li>Structured metadata via <code>.docs.json</code></li>
+  <li>Structured metadata via <code>_docs.json</code></li>
   <li>Single-template rendering for unlimited Markdown files</li>
   <li>Mobile-first responsive layout</li>
   <li>Light / dark theme toggle with persistence</li>
@@ -42,7 +42,7 @@ It is designed for lightweight static hosting (e.g. GitHub Pages) while still su
 ├── app.js              # Homepage logic (loads docs list)
 ├── viewer.js           # Viewer logic (loads Markdown content)
 └── docs/
-    ├── .docs.json      # Document registry (file, title, summary)
+    ├── _docs.json      # Document registry (file, title, summary)
     ├── doc1.md
     └── doc2.md
 </pre>
@@ -55,7 +55,7 @@ It is designed for lightweight static hosting (e.g. GitHub Pages) while still su
 The homepage reads metadata from:
 </p>
 
-<pre><code>docs/.docs.json</code></pre>
+<pre><code>docs/_docs.json</code></pre>
 
 <p>
 Each document must follow this strict schema:
@@ -128,7 +128,7 @@ This will immediately terminate the local server and return you to the command p
 
 <ul>
   <li>Ensure you are accessing <code>http://localhost:8000/</code></li>
-  <li>Verify that <code>http://localhost:8000/docs/.docs.json</code> loads directly</li>
+  <li>Verify that <code>http://localhost:8000/docs/_docs.json</code> loads directly</li>
   <li>Disable browser cache in DevTools if changes appear inconsistent</li>
 </ul>
 
@@ -141,7 +141,7 @@ If deploying to GitHub Pages, create an empty file named:
 <pre><code>.nojekyll</code></pre>
 
 <p>
-This ensures that <code>.docs.json</code> (a dotfile) is properly served.
+This ensures that <code>_docs.json</code> (a dotfile) is properly served.
 </p>
 
 <hr>
@@ -150,7 +150,7 @@ This ensures that <code>.docs.json</code> (a dotfile) is properly served.
 
 <ol>
   <li>Add a new <code>.md</code> file to the <code>/docs</code> directory.</li>
-  <li>Add a corresponding entry in <code>docs/.docs.json</code>.</li>
+  <li>Add a corresponding entry in <code>docs/_docs.json</code>.</li>
   <li>Refresh the homepage — the new document will appear automatically.</li>
 </ol>
 

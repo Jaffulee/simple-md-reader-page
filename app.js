@@ -27,7 +27,7 @@ async function loadDocList() {
   const grid = document.getElementById("docGrid");
   const errEl = document.getElementById("docError");
 
-  const jsonUrl = new URL("docs/.docs.json", window.location.href);
+  const jsonUrl = new URL("docs/_docs.json", window.location.href);
 
   try {
     const res = await fetch(jsonUrl);
