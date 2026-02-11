@@ -64,7 +64,19 @@ async function loadDoc() {
     errEl.textContent = `Could not load document. (${e.message})`;
     contentEl.innerHTML = "<p>Failed to render document.</p>";
   }
+    document.querySelectorAll('.tooltip').forEach(el => {
+    el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        el.classList.toggle('active');
+    });
+    });
+
+    document.addEventListener('click', () => {
+    document.querySelectorAll('.tooltip.active')
+        .forEach(el => el.classList.remove('active'));
+    });
 }
+
 
 initThemeToggle();
 loadDoc();

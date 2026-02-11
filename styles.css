@@ -283,7 +283,7 @@ code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 
   position: relative;
   cursor: help;
   border-bottom: 1px dotted var(--muted);
-  display: inline-block; /* important */
+  display: inline-block;
 }
 
 .tooltip::after {
@@ -292,8 +292,8 @@ code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 
   bottom: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
-  
-  background: var(--bg); /* fully opaque */
+
+  background: var(--bg);          /* opaque */
   color: var(--text);
 
   padding: 8px 10px;
@@ -315,11 +315,28 @@ code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 
   z-index: 9999;
 }
 
-.tooltip:hover::after {
+.tooltip.active::after {
   opacity: 1;
   transform: translateX(-50%) translateY(-4px);
 }
 
+.tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent var(--bg) transparent;
+  opacity: 0;
+  transition: opacity 120ms ease;
+  z-index: 9999;
+}
+
+.tooltip.active::before {
+  opacity: 1;
+}
 
 /* ---------- Responsive ---------- */
 @media (max-width: 820px){
