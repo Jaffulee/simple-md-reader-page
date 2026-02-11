@@ -12,6 +12,8 @@
   --accent-2: #23d5ab;
   --code-bg: rgba(255,255,255,0.08);
   --radius: 16px;
+  --glow-1: rgba(124,92,255,0.35);
+  --glow-2: rgba(35,213,171,0.22);
 }
 
 :root[data-theme="light"]{
@@ -26,6 +28,8 @@
   --accent: #4a2bff;
   --accent-2: #00a884;
   --code-bg: rgba(0,0,0,0.04);
+  --glow-1: rgba(150,130,255,0.20);
+  --glow-2: rgba(120,240,210,0.15);
 }
 
 * { box-sizing: border-box; }
@@ -74,8 +78,8 @@ code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 
   pointer-events: none;
   z-index: -2;
   background:
-    radial-gradient(1000px 600px at 20% -10%, rgba(124,92,255,0.35), transparent 55%),
-    radial-gradient(900px 600px at 110% 10%, rgba(35,213,171,0.22), transparent 60%);
+    radial-gradient(1000px 600px at 20% -10%, var(--glow-1), transparent 55%),
+    radial-gradient(900px 600px at 110% 10%, var(--glow-2), transparent 60%);
 }
 
 /* Smoothly fades the glow into solid background at the bottom */
