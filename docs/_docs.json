@@ -3,7 +3,8 @@
     {
       "file": "doc1.md",
       "title": "Getting Started",
-      "summary": "Introduction and setup guide for the template."
+      "summary": "Introduction and setup guide for the template.",
+      "date": "2026-02-01"
     },
     {
       "file": "doc2.md",

@@ -41,6 +41,7 @@ It is designed for lightweight static hosting (e.g. GitHub Pages) while still su
 ├── styles.css          # Responsive styling and theming
 ├── app.js              # Homepage logic (loads docs list)
 ├── viewer.js           # Viewer logic (loads Markdown content)
+├── .nojekyll           # Disables Jekyll
 └── docs/
     ├── _docs.json      # Document registry (file, title, summary)
     ├── doc1.md
@@ -153,6 +154,22 @@ This ensures that <code>_docs.json</code> (a dotfile) is properly served.
   <li>Add a corresponding entry in <code>docs/_docs.json</code>.</li>
   <li>Refresh the homepage — the new document will appear automatically.</li>
 </ol>
+<hr>
+
+<h2>Optional Date Field (Sorting)</h2>
+
+<p>
+Each document entry may include an optional <code>date</code> field (ISO format recommended: <code>YYYY-MM-DD</code>).
+If any documents include a date, the homepage will sort documents by newest date first,
+then fall back to alphabetical sorting by title.
+</p>
+
+<pre><code>{
+  "file": "doc1.md",
+  "title": "Getting Started",
+  "summary": "Introduction and setup guide for the template.",
+  "date": "2026-02-01"
+}</code></pre>
 
 <hr>
 
@@ -165,34 +182,28 @@ This ensures that <code>_docs.json</code> (a dotfile) is properly served.
   <li>Structured metadata-driven rendering</li>
 </ul>
 
+
 <hr>
 
-<h2>Related Work</h2>
+<h2>GitHub Pages Note (.nojekyll)</h2>
 
 <p>
-This repository forms part of a broader body of work exploring
-<strong>AI systems, optimisation, and mathematical modelling</strong>.
+GitHub Pages runs Jekyll by default, which may exclude files and folders beginning with
+<code>.</code> or <code>_</code>. This repository uses a JSON registry file (e.g. <code>docs/_docs.json</code>),
+so Jekyll should be disabled to ensure the file is served.
 </p>
 
-<ul>
-  <li>
-    <strong>AI-Based Vehicle Tracking, Counting, and Lane Estimation</strong><br>
-    End-to-end computer vision pipeline for detection, tracking, motion analysis,
-    and unsupervised lane estimation.<br>
-    <a href="https://github.com/Jaffulee/AI_car_counting">
-      View repository
-    </a>
-  </li>
+<p>
+Create an empty file named <code>.nojekyll</code> in the repository root:
+</p>
 
-  <li>
-    <strong>Gradient Descent Optimiser & Neural Network (From First Principles)</strong><br>
-    A fully custom neural network framework implemented from scratch using
-    tensor-based backpropagation and generalised Jacobians.<br>
-    <a href="https://github.com/Jaffulee/deep_neural_network">
-      View repository
-    </a>
-  </li>
-</ul>
+<pre><code>.nojekyll</code></pre>
+
+<p>
+Commit and push it. After redeploy, the registry file should load correctly from:
+</p>
+
+<pre><code>/docs/_docs.json</code></pre>
 
 <hr>
 
