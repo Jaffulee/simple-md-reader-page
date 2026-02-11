@@ -9,7 +9,12 @@
 </a>
 </p>
 
-<hr>
+<h2>
+<a href="https://jaffulee.github.io/simple-md-reader-page/index.html">
+  View the Live Demo
+</a>
+</h2>
+
 
 <h1>Markdown Blog Reader Template</h1>
 
