@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Viewer</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="index.html">Template</a>
+
+        <nav class="nav">
+        <button id="themeToggle" class="btn btn-ghost" type="button" aria-label="Toggle theme">
+            <span class="icon" aria-hidden="true">◐</span>
+        </button>
+        </nav>
+    </div>
+    </header>
+
+  <main class="container">
+    <section class="viewer">
+      <div class="viewer-top">
+        <a class="back-link" href="index.html">← Back</a>
+        <div class="meta">
+          <span class="pill" id="docPill">Loading…</span>
+        </div>
+      </div>
+
+      <article id="content" class="prose card">
+        <p>Loading document…</p>
+      </article>
+
+      <p id="viewerError" class="error" hidden></p>
+    </section>
+
+    <footer class="footer">
+      <p>Tip: share this page URL — each doc has its own link.</p>
+    </footer>
+  </main>
+
+  <script src="viewer.js" defer></script>
+</body>
+</html>

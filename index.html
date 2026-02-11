@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Docs</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="index.html">Template</a>
+
+        <nav class="nav">
+        <button id="themeToggle" class="btn btn-ghost" type="button" aria-label="Toggle theme">
+            <span class="icon" aria-hidden="true">◐</span>
+        </button>
+        </nav>
+    </div>
+    </header>
+
+  <main class="container">
+    <section class="hero">
+    <p class="eyebrow">Knowledge Base</p>
+    <h1 class="hero-title">Blog reader template</h1>
+    <p class="hero-subtitle">
+        A clean, responsive layout for reading Markdown files as standalone pages.
+    </p>
+    </section>
+
+
+    <section class="card">
+        <div class="card-header">
+        <h2 class="card-title">Documents</h2>
+        <p class="card-subtitle">Docs subtitle</p>
+        </div>
+
+
+      <div id="docGrid" class="grid">
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+      </div>
+
+      <p id="docError" class="error" hidden></p>
+    </section>
+
+    <footer class="footer">
+    <p>
+        Footer text: Minimal static template powered by Markdown
+    </p>
+    </footer>
+
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

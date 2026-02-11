@@ -1,0 +1,14 @@
+{
+  "docs": [
+    {
+      "file": "doc1.md",
+      "title": "Getting Started",
+      "summary": "Introduction and setup guide for the template."
+    },
+    {
+      "file": "doc2.md",
+      "title": "Advanced Guide",
+      "summary": "Deep dive into customization and layout behavior."
+    }
+  ]
+}
