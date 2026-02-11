@@ -277,7 +277,12 @@ code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 
   padding: 22px 0 40px;
   color: var(--muted);
   font-size: 0.95rem;
+
+  background: var(--bg);
+  border-top: 1px solid var(--border);
 }
+
+
 
 .tooltip {
   position: relative;
